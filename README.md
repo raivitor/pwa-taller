@@ -1,8 +1,8 @@
-`obs`: Notei que existe quase nenhum post em portugues falando sobre pwa com react então nessa primeira parte eu quis fazer algo bem introdutório para a galera que não tá manjando muito do assunto e nem de ingles. Na parte 2 abordarei React com Apollo.
-`obs2`: Ainda falta eu dar uma revisada no portugues. 
-`obs3`: os obs não fazem parte do post kk
+`obs`: Notei que existe quase nenhum post em portugues falando sobre pwa com react então nessa primeira parte eu quis fazer algo bem introdutório para a galera que não tá manjando muito do assunto e nem de ingles. Na parte 2 abordarei React com Apollo.<br>
+`obs2`: Ainda falta eu dar uma revisada no portugues. <br>
+`obs3`: os obs não fazem parte do post kk<br>
 
-# PWA com React Parte 1
+# PWA com React - Parte 1
 ## O que é PWA?
 O PWA vem da sigla “Progressive Web App”, ele é um web app que usa as modernas funcionalidades dos browser para entregar uma experiência de um app na web para os usuários.  Ele é muito similar a um sistema web, tem só que satisfazer alguns requisitos (que será comentado abaixo), fora isso o deploy é feito num servidor, acessíveis por uma url e são indexados pelas engines de buscas.
 
@@ -135,5 +135,5 @@ self.addEventListener('fetch', function (event) {
 });
 ```
 
-@TODO: add fazer uma 'conclusão'.
-@TODO: add o link da branch com o projeto completo.
+@TODO: add fazer uma 'conclusão'.<br>
+@TODO: add o link da branch com o projeto completo.<br>
