@@ -43,7 +43,7 @@ export default class TodoApp extends React.Component {
     this.state = {
       data: []
     }
-    this.apiUrl = 'http://5a9dd5a1a65e7d0014436b95.mockapi.io/note'
+    this.apiUrl = 'https://5a9dd5a1a65e7d0014436b95.mockapi.io/note'
   }
 
   componentDidMount() {
@@ -70,7 +70,6 @@ export default class TodoApp extends React.Component {
 
     axios.delete(this.apiUrl + '/' + id)
       .then((res) => {
-        console.log(res)
         this.setState({ data: remainder });
       })
   }
