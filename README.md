@@ -88,7 +88,6 @@ Criaremos um arquivo `./public/service-worker.js` que será o nosso service work
 
 Começaremos criando uma constante para salvar o nome do nosso cache e logo em seguida adicionaremos as urls que desejaremos que realize o cacheamento. Note que adicionamos o `bundle.js` pois é o bundle que o webpack cria. Em seguida tem o link do bootstrap que chamamos em `./public/index.html`. Por ultimo, mas muito imporante, adicionamos o endpoint da API que estamos consumindo, sem esse link a PWA não vai funcionar corretamente offline. 
 ```
-// Nome do cache
 const CACHE_NAME = 'pwa-cache-v1';
 
 const urlsToCache = [
