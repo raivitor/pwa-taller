@@ -1,6 +1,5 @@
-`obs`: Notei que existe quase nenhum post em portugues falando sobre pwa com react então nessa primeira parte eu quis fazer algo bem introdutório para a galera que não tá manjando muito do assunto e nem de ingles. Na parte 2 abordarei React com Apollo.<br>
-`obs2`: Ainda falta eu dar uma revisada no portugues. <br>
-`obs3`: os obs não fazem parte do post kk<br>
+`obs1`: Notei que existe quase nenhum post em portugues falando sobre pwa com react então nessa primeira parte eu quis fazer algo bem introdutório para a galera que não tá manjando muito do assunto e nem de ingles. Na parte 2 abordarei React com Apollo.<br>
+`obs2`: os obs não fazem parte do post kk<br>
 
 # PWA com React - Parte 1
 ## O que é PWA?
@@ -8,17 +7,17 @@ O PWA vem da sigla “Progressive Web App”, ele é um web app que usa as moder
 
 ## Características de um PWA
 Abaixo citarei algumas características importantes que um PWA precisa ter:
-* Progressivos: Eles vão progressivamente melhorando, com as novas funcionalidades dos browser. Por ser um sistema web ele funciona nos navegadores atuais e antigos.
-* Rápido: As PWA precisam ter uma rápida fluidez entre as telas e animações suaves, para não tirar a experiência de um app.
-* Confiável: Carregamento instantâneo e não mostrar telas de load. O PWA tem que funcionar persistir as informações localmente enquanto está off e quando voltar a conexão com a internet fazer a persistência no servidor. 
-* Engajável: É importante ter a mesma experiência imersiva que um app oferece. 
+* **Progressivos**: Eles vão progressivamente melhorando, com as novas funcionalidades dos browser. Por ser um sistema web ele funciona nos navegadores atuais e antigos.
+* **Rápido**: Os PWA precisam ter uma rápida fluidez entre as telas e animações suaves, para não tirar a experiência de um app.
+* **Confiável**: Carregamento instantâneo e não mostrar telas de load. O PWA tem que persistir as informações localmente enquanto está off e quando voltar a conexão com a internet fazer a persistência no servidor. 
+* **Engajável**: É importante ter a mesma experiência imersiva que um app oferece. 
 
 ## Porque desenvolver um PWA?
-Existem muitos aplicativos em que não são usado com tanta frequência que poderiam ser uma simples página na web, como app de pagamento de estacionamento ou de companhias aéreas (queria poder usar este app com mais frequência -_- ). Além disso nem sempre temos o espaço para armazenar todos os aplicativos que desejamos e algumas vezes até queremos baixar mas o plano de dados já está no limite ou a conexão está lenta. 
+Existem muitos aplicativos em que não são usado com tanta frequência e que poderiam ser uma simples página na web, como app de pagamento de estacionamento ou de companhias aéreas (queria poder usar este app com mais frequência -_- ). Além disso nem sempre temos o espaço para armazenar todos os aplicativos que desejamos e algumas vezes até queremos baixar mas o plano de dados já está no limite ou a conexão está lenta. 
 
 Um PWA resolve todos esses problemas, pois deixa mais acessível para todos usuários e também garante uma estabilidade melhor do sistema porque quem tiver acessando usará sempre a última versão do sistema.
 
-Ao contrário do que alguns pensam, é possível “instalar” o PWA no smartphone. É criado um atalho na tela inicial, simulando um app nativo. É possível também enviar push notifications, a empresa eXtra Electronics conseguiu aumentar em 4x o engajamento dos usuários e seus clientes passaram a ficar no site o dobro do tempo. Depois de adotar um PWA a AliExpress aumentou a taxa de conversão em 104% em todos os browsers e 82% no IOS.
+Ao contrário do que alguns pensam, é possível “instalar” o PWA no smartphone. É criado um atalho na tela inicial, simulando um app nativo. É possível também enviar push notifications, a empresa eXtra Electronics migrou para PWA e conseguiu aumentar em 4x o engajamento dos usuários e seus clientes passaram a ficar no site o dobro do tempo. Depois de adotar um PWA a AliExpress aumentou a taxa de conversão em 104% em todos os browsers e 82% no IOS.
 
 Se depois de tudo isso você não ficou interessado em aprender mais sobre PWA é uma pena, fiz o que pude :’(
 ## Show me the code!
@@ -70,11 +69,11 @@ Quando se cria um arquivo pelo `creat-reat-app` já vem com um `./public/manifes
 }
 ```
 Vamos lá para a explicação desses atributos:
-* `short_name`: Nome abreviado da PWA. Se informado, ele será usado em contextos onde o campo de nome for muito longo. É recomendado que o nome abreviado não deva exceder 12 caracteres.
+* `short_name`: Nome abreviado do PWA. Se informado, ele será usado em contextos onde o campo de nome for muito longo. É recomendado que o nome abreviado não deva exceder 12 caracteres.
 * `name`: Nome da extensão. Ele é usado para identificar o PWA no browser e na home-screen do usuário. É uma boa prática manter o nome suficientemente curto para exibir na interface do usuário. O Google Chrome e o Microsoft Edge restringem o comprimento do nome a 45 caracteres. 
-* `icons`: Esse é o ícone da PWA. É recomendável que tenha um icone de pelo menos 192x192. Esse icone aparecerá na home-screen do usuário.
+* `icons`: Esse é o ícone do PWA. É recomendável que tenha um icone de pelo menos 192x192. Esse icone aparecerá na home-screen do usuário.
 * `start_url`: É o arquivo que será inicializado assim que o usuário abrir o seu app. É possivel passar alguns parametros também.
-* `display`: Aqui definimos como browser mostrará o app. Se usarmos o `standalone` o app ficara fullscreen e não exibirá alguns itens do browser. Se usarmos o `browser`, será mostrado como um site normal no browser do usuário.
+* `display`: Aqui definimos como browser mostrará o app. Se usarmos o `standalone` o app ficará fullscreen e não exibirá alguns itens do browser. Se usarmos o `browser`, será mostrado como um site normal no browser do usuário.
 * `theme_color`: Define a cor da barra de ferramentas.
 * `background_color`: Define a cor de fundo. Essa cor é apresentada enquanto o site não é renderizado.
  
@@ -123,7 +122,7 @@ self.addEventListener("activate", event => {
   );
 });
 ```
-Aqui onde a magia acontece, toda vez que o PWA precisa de algum recurso o evento `fetch` dispara e ele busca no cache se já temos esse recurso e manda para o usuário. Caso não seja, segue o fluxo normal. O método `caches.match()` é quem faz a verificação se o que a aplicação tá requisitando está no cache.
+Aqui onde a magia acontece, toda vez que o PWA precisa de algum recurso o evento `fetch` dispara e ele busca no cache se já temos esse recurso e manda para o usuário. Caso não tenha, segue o fluxo normal. O método `caches.match()` é quem faz a verificação se o que a aplicação tá requisitando está no cache.
 ```
 self.addEventListener('fetch', function (event) {
   event.respondWith(
@@ -133,6 +132,6 @@ self.addEventListener('fetch', function (event) {
   );
 });
 ```
-
-@TODO: add fazer uma 'conclusão'.<br>
-@TODO: add o link da branch com o projeto completo.<br>
+## Finalizando
+Espero que tenham gostado deste post, ele foi bem introdutório mas tentei explicar bem os conceitos básicos do PWA. O código final está na branch [dev](https://github.com/raivitor/pwa-taller/tree/dev) do projeto que clonaram, então qualquer dúvida podem olhar lá o código ou comentar no post.<br>
+Na parte 2 da série de PWA será uma aplicação maior que usaremos o React com o [GraphQl](graphql.org) e veremos alguns conflitos que podem acontecer quando uma pessoa online altera uma informação que outra pessoa off também fez alteração. E também será abordado push notifications.
